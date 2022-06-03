@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <form action="" class="form" id="form">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label class="label surnamelabel col-form-label-lg" for="surname">Фамилия<br>
+          <input class="input form-control" type="text" id="surname" placeholder="Фамилия">
+          <span class="error block" id="surnameError">Введите фамилию</span>
+        </label>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label class="label namelabel col-form-label-lg" for="name">Имя<br>
+          <input class="input form-control" type="text" id="name" placeholder="Имя">
+          <span class="error block" id="nameError">Введите имя</span>
+        </label>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label class="label middlenamelabel col-form-label-lg" for="middlename">Отчество<br>
+          <input class="input form-control" type="text" id="middlename" placeholder="Отчество">
+          <span class="error block" id="middlenameeError">Введите отчество</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label class="label yearBornlabel col-form-label-lg" for="yearBorn">Дата рождения<br>
+          <input class="input form-control" type="date" id="yearBorn" placeholder="Дата рождения">
+          <span class="error block" id="yearBornError">Введите дату рождения (от 01.01.1900 до текущей даты)</span>
+        </label>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label class="label yearStudiedlabel col-form-label-lg" for="yearStudied">Год начала обучения<br>
+          <input class="input form-control" type="text" id="yearStudied" placeholder="Год начала обучения">
+          <span class="error block" id="yearStudiedError">Введите год поступления(от 2000-го до текущего года)</span>
+        </label>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label class="label facultylabel col-form-label-lg" for="faculty">Факультет<br>
+          <input class="input form-control" type="text" id="faculty" placeholder="Факультет">
+          <span class="error block" id="facultyError">Введите факультет</span>
+        </label>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" id="submitButton" type="submit">Добавить студента</button>
+  </form>
+
+  <div class="filters__container">
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Фильтр по ФИО</span>
+      </div>
+      <input class="input form-control" type="text" id="initialFilter" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Фильтр по году начала обучения</span>
+      </div>
+      <input class="input form-control" type="text" id="studiedStartFilter" aria-describedby="basic-addon2">
+    </div>
+
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Фильтр по году окончания обучения</span>
+      </div>
+      <input class="input form-control" type="text" id="studiedFinishFilter" aria-describedby="basic-addon3">
+    </div>
+
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon4">Фильтр факультету</span>
+      </div>
+      <input class="input form-control" type="text" id="facultyFilter" aria-describedby="basic-addon4">
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <th class="initialColumns" id="initialsSort">Фамилия Имя Отчество</th>
+      <th class="initialColumns" id="bornDateSort">Дата рождения</th>
+      <th class="initialColumns" id="studiedDateSort">Год поступления</th>
+      <th class="initialColumns" id="facultySort">Факультет</th>
+    </thead>
+    <tbody id="table">
+
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>

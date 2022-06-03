@@ -1,0 +1,38 @@
+
+.form {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: bisque;
+  border-radius: 10px;
+}
+
+.form-group {
+  height: 125px;
+}
+
+.block {
+  display: none;
+}
+
+.initialColumns {
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+
+.initialColumns:hover {
+  color: #17a2b8 !important;
+}
+
+.filters__container {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+
+.col-form-label-lg .error {
+  font-size: 12px !important;
+  color: red;
+}
+
+
